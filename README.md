@@ -1,7 +1,14 @@
-Role Name
-=========
+<p><img src="https://cdn.worldvectorlogo.com/logos/percona.svg" alt="percona logo" title="percona" align="right" height="60" /></p>
 
-A brief description of the role goes here.
+ansible-role-percona-xtradb-cluster
+===================================
+
+[![Build Status](https://travis-ci.org/bborysenko/ansible-role-percona-xtradb-cluster.svg?branch=master)](https://travis-ci.org/bborysenko/ansible-role-percona-xtradb-cluster)
+[![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![Ansible Role](https://img.shields.io/badge/ansible%20role-bborysenko.percona-xtradb-cluster-blue.svg)](https://galaxy.ansible.com/bborysenko/percona-xtradb-cluster/)
+[![GitHub tag](https://img.shields.io/github/tag/bborysenko/ansible-role-percona-xtradb-cluster.svg)](https://github.com/bborysenko/ansible-role-percona-xtradb-cluster/tags)
+
+Ansible role to deploy Percona XtraDB Cluster.
 
 Requirements
 ------------
