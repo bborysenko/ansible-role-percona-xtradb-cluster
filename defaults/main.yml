@@ -1,2 +1,5 @@
 ---
-# defaults file for percona-xtradb-cluster
+pxc_packages:
+  - Percona-XtraDB-Cluster-57
+  - percona-toolkit
+  - percona-xtrabackup-24

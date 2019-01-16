@@ -1,0 +1,16 @@
+---
+- name: Setup YUM repository
+  yum:
+    name: "{{ pxc_release_package }}"
+    state: present
+
+- name: Install packages
+  yum:
+    name: "{{ pxc_packages }}"
+    state: present
+
+- name: Ensure MySQL service is started and enabled
+  service:
+    name: mysql
+    state: started
+    enabled: true

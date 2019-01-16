@@ -1,2 +1,2 @@
 ---
-# tasks file for percona-xtradb-cluster
+- include: setup.yml

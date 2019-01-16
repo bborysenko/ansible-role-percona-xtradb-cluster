@@ -1,2 +1,3 @@
 ---
-# vars file for percona-xtradb-cluster
+pxc_release_package: >
+  https://www.percona.com/downloads/percona-release/redhat/0.1-6/percona-release-0.1-6.noarch.rpm
