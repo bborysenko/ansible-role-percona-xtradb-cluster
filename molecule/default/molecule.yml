@@ -29,6 +29,9 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 provisioner:
   name: ansible
+  config_options:
+    defaults:
+      stdout_callback: skippy
   lint:
     name: ansible-lint
 scenario:
