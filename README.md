@@ -1,12 +1,12 @@
 <p><img src="https://cdn.worldvectorlogo.com/logos/percona.svg" alt="percona logo" title="percona" align="right" height="60" /></p>
 
-ansible-role-percona-xtradb-cluster
-===================================
+Ansible Role: Percona XtraDB Cluster
+====================================
 
-[![Build Status](https://travis-ci.org/bborysenko/ansible-role-percona-xtradb-cluster.svg?branch=master)](https://travis-ci.org/bborysenko/ansible-role-percona-xtradb-cluster)
+[![Build Status](https://travis-ci.org/bborysenko/ansible_role_percona_xtradb_cluster.svg?branch=master)](https://travis-ci.org/bborysenko/ansible_role_percona_xtradb_cluster)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![Ansible Role](https://img.shields.io/badge/ansible%20role-bborysenko.percona--xtradb--cluster-blue.svg)](https://galaxy.ansible.com/bborysenko/percona-xtradb-cluster/)
-[![GitHub tag](https://img.shields.io/github/tag/bborysenko/ansible-role-percona-xtradb-cluster.svg)](https://github.com/bborysenko/ansible-role-percona-xtradb-cluster/tags)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-bborysenko.percona__xtradb__cluster-blue.svg)](https://galaxy.ansible.com/bborysenko/ansible_role_percona_xtradb_cluster)
+[![GitHub tag](https://img.shields.io/github/tag/bborysenko/ansible_role_percona_xtradb_cluster.svg)](https://github.com/bborysenko/ansible_role_percona_xtradb_cluster/tags)
 
 Ansible role to deploy Percona XtraDB Cluster.
 
@@ -46,7 +46,7 @@ passed in as parameters) is always nice for users too:
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
