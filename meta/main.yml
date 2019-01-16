@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: percona-xtradb-cluster
   author: Borys Borysenko
   description: Percona XtraDB Cluster
   license: MIT
