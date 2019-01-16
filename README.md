@@ -5,7 +5,7 @@ Ansible Role: Percona XtraDB Cluster
 
 [![Build Status](https://travis-ci.org/bborysenko/ansible_role_percona_xtradb_cluster.svg?branch=master)](https://travis-ci.org/bborysenko/ansible_role_percona_xtradb_cluster)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-bborysenko.percona__xtradb__cluster-blue.svg)](https://galaxy.ansible.com/bborysenko/ansible_role_percona_xtradb_cluster)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-bborysenko.percona__xtradb__cluster-blue.svg)](https://galaxy.ansible.com/bborysenko/percona_xtradb_cluster)
 [![GitHub tag](https://img.shields.io/github/tag/bborysenko/ansible_role_percona_xtradb_cluster.svg)](https://github.com/bborysenko/ansible_role_percona_xtradb_cluster/tags)
 
 Ansible role to deploy Percona XtraDB Cluster.
