@@ -1,3 +1,4 @@
 ---
-pxc_release_package: >
-  https://www.percona.com/downloads/percona-release/redhat/0.1-6/percona-release-0.1-6.noarch.rpm
+pxc_release_package: https://www.percona.com/downloads/percona-release/redhat/0.1-6/percona-release-0.1-6.noarch.rpm
+
+pxc_temp_password_regex: A temporary password is generated for root@localhost

@@ -1,12 +1,13 @@
 ---
-- name: Lookup temporary MySQL root password assigned when DB initialized first time
-  shell: grep 'A temporary password is generated for root@localhost' /var/log/mysqld.log | awk '{print $NF}'
+- name: Lookup temporary MySQL root password
+  shell: grep '{{ pxc_temp_password_regex }}' /var/log/mysqld.log | awk '{print $NF}'
   changed_when: false
   register: _pxc_temp_password
 
 - name: Set the MySQL root password
-  shell: >
-    mysql --connect-expired-password --password='{{ _pxc_temp_password.stdout }}' --execute="ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ pxc_root_password }}';"
+  vars:
+    _statement: "ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ pxc_root_password }}'"
+  command: mysql --connect-expired-password -p'{{ _pxc_temp_password.stdout }}' -e "{{ _statement }}"
   when: _pxc_temp_password.stdout != ""
 
 - name: Copy .my.cnf file with root password credentials
@@ -18,9 +19,9 @@
     mode: 0600
   when: _pxc_temp_password.stdout != ""
 
-- name: Delete temp password line from /var/log/mysqld.log file
+- name: Remove temporary password line
   lineinfile:
     dest: /var/log/mysqld.log
-    regexp: 'A temporary password is generated for root@localhost'
+    regexp: "{{ pxc_temp_password_regex }}"
     state: absent
   when: _pxc_temp_password.stdout != ""
