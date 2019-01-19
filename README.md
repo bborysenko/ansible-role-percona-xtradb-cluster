@@ -5,10 +5,12 @@ Ansible Role: Percona XtraDB Cluster
 
 [![Build Status](https://travis-ci.org/bborysenko/ansible_role_percona_xtradb_cluster.svg?branch=master)](https://travis-ci.org/bborysenko/ansible_role_percona_xtradb_cluster)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-bborysenko.percona__xtradb__cluster-blue.svg)](https://galaxy.ansible.com/bborysenko/percona_xtradb_cluster)
+![Ansible Galaxy](https://img.shields.io/ansible/role/36320.svg)
+![Downloads](https://img.shields.io/ansible/role/d/36320.svg)
+![Ansible](https://img.shields.io/badge/dynamic/json.svg?label=min_ansible_version&url=https%3A%2F%2Fgalaxy.ansible.com%2Fapi%2Fv1%2Froles%2F36320%2F&query=$.min_ansible_version)
 [![GitHub tag](https://img.shields.io/github/tag/bborysenko/ansible_role_percona_xtradb_cluster.svg)](https://github.com/bborysenko/ansible_role_percona_xtradb_cluster/tags)
 
-Ansible role to deploy Percona XtraDB Cluster.
+Ansible role to manage Percona XtraDB Cluster on RHEL/CentOS 7.
 
 Requirements
 ------------
@@ -36,12 +38,13 @@ are used from other roles.
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables
-passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: percona-xtradb-cluster, x: 42 }
+```
+- name: Percona XtraDB Cluster
+  hosts: pxc
+  roles:
+    - role: bborysenko.percona-xtradb-cluster
+      pxc_root_password: Super_P@s$0rd
+```
 
 License
 -------
