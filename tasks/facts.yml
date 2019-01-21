@@ -1,0 +1,21 @@
+---
+- name: Stat if custom fact directory exists
+  stat:
+    path: /etc/ansible/facts.d
+  register: _pxc_factsd
+
+- name: Create custom fact directory
+  file:
+    path: /etc/ansible/facts.d
+    state: directory
+  when: _pxc_factsd.stat.isdir is undefined
+
+- name: Copy custom WSREP facts
+  copy:
+    src: etc/ansible/facts.d/pxc.fact
+    dest: /etc/ansible/facts.d/pxc.fact
+    mode: 0755
+  register: _pxc_factsd_wsrep
+  notify: reload facts
+
+- meta: flush_handlers

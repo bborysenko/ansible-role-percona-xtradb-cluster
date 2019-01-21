@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+WSREP=$(mysql --unbuffered --skip-column-names --batch --connect-timeout=3 -e "SHOW GLOBAL STATUS LIKE 'wsrep_%';" 2> /dev/null | sed 's/^/  "/g; s/\t/": "/g; ;s/$/",/g' | sed -z 's/\(.*\),/\1/')
+
+cat <<EOF
+{
+$WSREP
+}
+EOF

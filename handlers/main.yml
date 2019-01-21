@@ -1,2 +1,4 @@
 ---
-# handlers file for percona-xtradb-cluster
+- name: Re-run setup to use custom facts
+  setup: ~
+  listen: reload facts
